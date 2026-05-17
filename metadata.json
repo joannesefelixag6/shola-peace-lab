@@ -1,0 +1,8 @@
+{
+  "name": "Shola-Peace Medical Lab",
+  "description": "Professional medical diagnostic services and lab test packages for accurate and trusted healthcare results.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
