@@ -42,14 +42,14 @@ export default function BookingDashboard() {
   return (
     <section className="py-20 bg-slate-900 text-white">
       <div className="container-custom">
-        <div className="flex items-center justify-between mb-12">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-12 gap-6">
           <div>
-            <h2 className="text-3xl font-bold font-display uppercase tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-bold font-display uppercase tracking-tight">
               MY <span className="text-primary-green">APPOINTMENTS</span>
             </h2>
-            <p className="text-slate-400 mt-2">Locally saved booking requests (Preview Mode)</p>
+            <p className="text-slate-400 mt-2 text-sm">Locally saved booking requests (Preview Mode)</p>
           </div>
-          <div className="bg-primary-green/10 px-4 py-2 rounded-full border border-primary-green/20">
+          <div className="bg-primary-green/10 px-4 py-2 rounded-full border border-primary-green/20 w-fit">
             <span className="text-primary-green font-bold text-sm">{bookings.length} Total</span>
           </div>
         </div>

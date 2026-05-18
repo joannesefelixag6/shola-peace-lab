@@ -6,24 +6,24 @@ export default function Hero({ onBook }: { onBook: () => void }) {
     <section className="relative min-h-[85vh] flex items-center pt-10 pb-20 overflow-hidden bg-white">
       <div className="container-custom">
         <div className="flex flex-col lg:flex-row items-center gap-12">
-          <div className="lg:w-1/2 z-10">
+          <div className="lg:w-1/2 z-10 text-center lg:text-left">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="inline-flex items-center space-x-2 bg-primary-green/10 text-primary-green px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-6 border border-primary-green/20">
+              <div className="inline-flex items-center space-x-2 bg-primary-green/10 text-primary-green px-4 py-1.5 rounded-full text-[10px] sm:text-xs font-bold tracking-widest uppercase mb-6 border border-primary-green/20">
                 <ShieldCheck size={14} />
                 <span>NIGERIA'S MOST TRUSTED LAB</span>
               </div>
-              <h1 className="text-5xl lg:text-7xl font-bold font-display text-slate-900 leading-[1.1] mb-6">
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold font-display text-slate-900 leading-[1.1] mb-6">
                 ACCURATE RESULTS <br />
                 <span className="text-primary-green">FASTER THAN EVER</span>
               </h1>
-              <p className="text-lg text-slate-600 mb-10 max-w-lg leading-relaxed">
+              <p className="text-base sm:text-lg text-slate-600 mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed">
                 Experience world-class diagnostic services with automated technology. Get your medical reports within 24 hours in Benin City.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -42,20 +42,20 @@ export default function Hero({ onBook }: { onBook: () => void }) {
                 </a>
               </div>
 
-              <div className="mt-12 flex items-center space-x-8 pt-8 border-t border-slate-100">
-                <div>
-                  <h4 className="text-2xl font-bold text-slate-900 leading-none">10k+</h4>
-                  <p className="text-sm text-slate-500 font-medium mt-1">Happy Patients</p>
+              <div className="mt-12 grid grid-cols-3 gap-4 sm:flex sm:items-center sm:space-x-8 pt-8 border-t border-slate-100">
+                <div className="text-center lg:text-left">
+                  <h4 className="text-xl sm:text-2xl font-bold text-slate-900 leading-none">10k+</h4>
+                  <p className="text-[10px] sm:text-sm text-slate-500 font-medium mt-1">Patients</p>
                 </div>
-                <div className="w-px h-10 bg-slate-200"></div>
-                <div>
-                  <h4 className="text-2xl font-bold text-slate-900 leading-none">500+</h4>
-                  <p className="text-sm text-slate-500 font-medium mt-1">Daily Tests</p>
+                <div className="hidden sm:block w-px h-10 bg-slate-200"></div>
+                <div className="text-center lg:text-left">
+                  <h4 className="text-xl sm:text-2xl font-bold text-slate-900 leading-none">500+</h4>
+                  <p className="text-[10px] sm:text-sm text-slate-500 font-medium mt-1">Daily Tests</p>
                 </div>
-                <div className="w-px h-10 bg-slate-200"></div>
-                <div>
-                  <h4 className="text-2xl font-bold text-slate-900 leading-none">24h</h4>
-                  <p className="text-sm text-slate-500 font-medium mt-1">Max Turnaround</p>
+                <div className="hidden sm:block w-px h-10 bg-slate-200"></div>
+                <div className="text-center lg:text-left">
+                  <h4 className="text-xl sm:text-2xl font-bold text-slate-900 leading-none">24h</h4>
+                  <p className="text-[10px] sm:text-sm text-slate-500 font-medium mt-1">Turnaround</p>
                 </div>
               </div>
             </motion.div>
@@ -71,7 +71,7 @@ export default function Hero({ onBook }: { onBook: () => void }) {
                <img 
                 src="https://images.unsplash.com/photo-1559839734-2b71f1536783?q=80&w=2070&auto=format&fit=crop" 
                 alt="Black Medical Specialist" 
-                className="rounded-3xl shadow-2xl relative z-10 w-full h-[550px] object-cover"
+                className="rounded-3xl shadow-2xl relative z-10 w-full h-[350px] sm:h-[450px] lg:h-[550px] object-cover"
                 referrerPolicy="no-referrer"
               />
               <div className="absolute -top-12 -right-12 w-64 h-64 bg-accent-green/20 rounded-full blur-3xl -z-10"></div>

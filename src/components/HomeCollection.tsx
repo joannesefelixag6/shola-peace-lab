@@ -16,20 +16,20 @@ export default function HomeCollection({ onBook }: { onBook: (packageName: strin
 
       <div className="container-custom relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-16">
-          <div className="lg:w-1/2">
-            <div className="inline-flex items-center space-x-2 bg-white/10 text-white px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-6 border border-white/20">
+          <div className="lg:w-1/2 text-center lg:text-left">
+            <div className="inline-flex items-center space-x-2 bg-white/10 text-white px-4 py-1.5 rounded-full text-[10px] sm:text-xs font-bold tracking-widest uppercase mb-6 border border-white/20">
               <Truck size={14} />
               <span>Premium Convenience</span>
             </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-white font-display mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white font-display mb-6 leading-tight">
               CAN'T COME TO US? <br />
               <span className="text-accent-green">WE'LL COME TO YOU.</span>
             </h2>
-            <p className="text-white/80 text-lg mb-10 leading-relaxed max-w-xl">
+            <p className="text-white/80 text-base sm:text-lg mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0">
               Experience hassle-free sample collection from the comfort of your home or office. Our certified healthcare professionals ensure safety and hygiene at every step.
             </p>
             
-            <div className="space-y-6 mb-10">
+            <div className="space-y-6 mb-10 text-left max-w-md mx-auto lg:mx-0">
               {steps.map((step, idx) => (
                 <div key={idx} className="flex items-start space-x-4">
                   <div className="bg-white/10 p-3 rounded-xl text-white border border-white/10">

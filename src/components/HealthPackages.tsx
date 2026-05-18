@@ -36,21 +36,21 @@ export default function HealthPackages({ onBook }: { onBook: (packageName: strin
     <section id="packages" className="py-24 bg-white">
       <div className="container-custom">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
-          <div className="max-w-2xl">
-            <div className="flex items-center space-x-2 text-primary-green font-bold text-sm tracking-widest uppercase mb-4">
+          <div className="max-w-2xl text-center md:text-left">
+            <div className="flex items-center justify-center md:justify-start space-x-2 text-primary-green font-bold text-sm tracking-widest uppercase mb-4">
               <Zap size={16} />
               <span>Smart Health Bundles</span>
             </div>
-            <h2 className="text-4xl font-bold text-slate-900 font-display mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 font-display mb-4">
               CURATED <span className="text-primary-green">HEALTH PACKAGES</span>
             </h2>
-            <p className="text-slate-600">
+            <p className="text-slate-600 text-sm sm:text-base">
               Save up to 40% with our curated diagnostic bundles designed for specific health goals and age groups.
             </p>
           </div>
           <button 
             onClick={() => onBook('General Checkup')}
-            className="mt-6 md:mt-0 text-primary-green font-bold flex items-center hover:underline group"
+            className="mt-8 md:mt-0 text-primary-green font-bold flex items-center justify-center hover:underline group w-full md:w-auto"
           >
             Compare all packages
             <ShieldCheck size={18} className="ml-2 group-hover:scale-110 transition-transform" />
