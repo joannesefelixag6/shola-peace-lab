@@ -42,7 +42,7 @@ const services = [
 
 export default function ServicesSection({ onBook }: { onBook: (packageName: string) => void }) {
   return (
-    <section className="py-20 bg-bg-light">
+    <section id="services" className="py-20 bg-bg-light">
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-slate-900 font-display uppercase tracking-tight">
@@ -79,7 +79,10 @@ export default function ServicesSection({ onBook }: { onBook: (packageName: stri
         </div>
 
         <div className="text-center mt-12">
-          <button className="border-2 border-primary-green text-primary-green px-8 py-3 rounded font-bold hover:bg-primary-green hover:text-white transition-all flex items-center mx-auto space-x-2">
+          <button 
+            onClick={() => onBook('General Checkup')}
+            className="border-2 border-primary-green text-primary-green px-8 py-3 rounded font-bold hover:bg-primary-green hover:text-white transition-all flex items-center mx-auto space-x-2"
+          >
             <span>VIEW ALL SERVICES</span>
             <ChevronRight size={18} />
           </button>

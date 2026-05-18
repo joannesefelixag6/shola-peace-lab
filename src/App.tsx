@@ -34,7 +34,7 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col relative">
       <TopHeader />
-      <Navbar />
+      <Navbar onBook={openBooking} />
       <main className="flex-grow">
         <Hero onBook={openBooking} />
         <FeatureBar />
@@ -45,11 +45,11 @@ export default function App() {
         <ServicesSection onBook={openBooking} />
         <StatsBar />
         <HealthBlog />
-        <FAQSection />
+        <FAQSection onBook={openBooking} />
         <BookingDashboard />
         <Testimonials />
       </main>
-      <Footer />
+      <Footer onBook={openBooking} />
       <FloatingActions />
       
       <BookingModal 

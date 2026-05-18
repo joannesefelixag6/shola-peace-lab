@@ -33,10 +33,13 @@ export default function Hero({ onBook }: { onBook: () => void }) {
                   <Calendar size={20} />
                   <span>BOOK APPOINTMENT</span>
                 </motion.button>
-                <button className="flex items-center justify-center space-x-3 px-8 py-5 border-2 border-slate-100 rounded-2xl font-bold text-slate-700 hover:bg-slate-50 transition-all text-lg">
+                <a 
+                  href="tel:09155833115"
+                  className="flex items-center justify-center space-x-3 px-8 py-5 border-2 border-slate-100 rounded-2xl font-bold text-slate-700 hover:bg-slate-50 transition-all text-lg"
+                >
                   <Phone size={20} />
                   <span>09155833115</span>
-                </button>
+                </a>
               </div>
 
               <div className="mt-12 flex items-center space-x-8 pt-8 border-t border-slate-100">

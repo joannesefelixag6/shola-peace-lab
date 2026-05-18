@@ -33,7 +33,7 @@ const packages = [
 
 export default function HealthPackages({ onBook }: { onBook: (packageName: string) => void }) {
   return (
-    <section className="py-24 bg-white">
+    <section id="packages" className="py-24 bg-white">
       <div className="container-custom">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div className="max-w-2xl">
@@ -48,7 +48,10 @@ export default function HealthPackages({ onBook }: { onBook: (packageName: strin
               Save up to 40% with our curated diagnostic bundles designed for specific health goals and age groups.
             </p>
           </div>
-          <button className="mt-6 md:mt-0 text-primary-green font-bold flex items-center hover:underline group">
+          <button 
+            onClick={() => onBook('General Checkup')}
+            className="mt-6 md:mt-0 text-primary-green font-bold flex items-center hover:underline group"
+          >
             Compare all packages
             <ShieldCheck size={18} className="ml-2 group-hover:scale-110 transition-transform" />
           </button>

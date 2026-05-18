@@ -24,7 +24,7 @@ const reviews = [
 
 export default function Testimonials() {
   return (
-    <section className="py-20 bg-bg-light">
+    <section id="testimonials" className="py-20 bg-bg-light">
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-slate-900 font-display uppercase tracking-tight">

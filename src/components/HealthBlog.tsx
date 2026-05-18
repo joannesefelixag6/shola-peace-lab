@@ -24,7 +24,7 @@ const blogs = [
 
 export default function HealthBlog() {
   return (
-    <section className="py-24 bg-white">
+    <section id="blog" className="py-24 bg-white">
       <div className="container-custom">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="flex items-center justify-center space-x-2 text-primary-green font-bold text-sm tracking-widest uppercase mb-4">
@@ -63,7 +63,10 @@ export default function HealthBlog() {
                 <h3 className="text-xl font-bold text-slate-900 mb-4 group-hover:text-primary-green transition-colors leading-tight">
                   {blog.title}
                 </h3>
-                <button className="flex items-center text-primary-green font-bold text-sm hover:underline group/btn">
+                <button 
+                  onClick={() => alert('Article content is coming soon! Stay tuned.')}
+                  className="flex items-center text-primary-green font-bold text-sm hover:underline group/btn"
+                >
                   Read Article <ArrowRight size={16} className="ml-2 group-hover/btn:translate-x-1 transition-transform" />
                 </button>
               </div>
@@ -72,7 +75,10 @@ export default function HealthBlog() {
         </div>
 
         <div className="mt-16 text-center">
-          <button className="bg-slate-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-primary-green transition-colors">
+          <button 
+            onClick={() => alert('Our health tip archive is currently being updated. Check back soon!')}
+            className="bg-slate-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-primary-green transition-colors"
+          >
             VIEW ALL HEALTH TIPS
           </button>
         </div>

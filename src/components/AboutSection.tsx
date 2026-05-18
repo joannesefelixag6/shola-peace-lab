@@ -10,7 +10,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section className="py-20 bg-white overflow-hidden">
+    <section id="about" className="py-20 bg-white overflow-hidden">
       <div className="container-custom">
         <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
           <div className="w-full">

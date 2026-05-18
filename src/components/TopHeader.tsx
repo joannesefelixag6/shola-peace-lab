@@ -5,14 +5,14 @@ export default function TopHeader() {
     <div className="bg-[#002d18] text-white py-2 text-sm hidden md:block">
       <div className="container-custom flex justify-between items-center">
         <div className="flex items-center space-x-6">
-          <div className="flex items-center space-x-2">
+          <a href="tel:09155833115" className="flex items-center space-x-2 hover:text-accent-green transition-colors">
             <Phone size={14} className="text-accent-green" />
             <span>09155833115, 08064975990</span>
-          </div>
-          <div className="flex items-center space-x-2">
+          </a>
+          <a href="mailto:sholapeacelab@gmail.com" className="flex items-center space-x-2 hover:text-accent-green transition-colors">
             <Mail size={14} className="text-accent-green" />
             <span>sholapeacelab@gmail.com</span>
-          </div>
+          </a>
         </div>
         <div className="flex items-center space-x-2">
           <Clock size={14} className="text-accent-green" />
