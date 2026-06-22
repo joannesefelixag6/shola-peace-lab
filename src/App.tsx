@@ -31,7 +31,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col relative">
+    <div className="min-h-screen flex flex-col relative" id="top">
       <TopHeader />
       <Navbar onBook={openBooking} />
       <main className="flex-grow">
