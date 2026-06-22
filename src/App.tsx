@@ -8,7 +8,6 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import FeatureBar from './components/FeatureBar';
 import Accreditations from './components/Accreditations';
-import HealthPackages from './components/HealthPackages';
 import HomeCollection from './components/HomeCollection';
 import ServicesSection from './components/ServicesSection';
 import AboutSection from './components/AboutSection';
@@ -40,7 +39,6 @@ export default function App() {
         <FeatureBar />
         <Accreditations />
         <AboutSection />
-        <HealthPackages onBook={openBooking} />
         <HomeCollection onBook={openBooking} />
         <ServicesSection onBook={openBooking} />
         <StatsBar />

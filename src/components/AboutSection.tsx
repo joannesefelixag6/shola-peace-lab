@@ -37,9 +37,9 @@ export default function AboutSection() {
               <div className="text-center sm:text-left">
                 <p className="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-1">Need Help? Call Us Anytime</p>
                 <div className="text-2xl font-bold text-primary-green flex flex-col sm:flex-row sm:space-x-4">
-                  <span>09155833115</span>
+                  <span>+234 915 583 3115</span>
                   <span className="hidden sm:inline">|</span>
-                  <span>08064975990</span>
+                  <span>+234 806 497 5990</span>
                 </div>
               </div>
               <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary-green/5 rounded-full"></div>

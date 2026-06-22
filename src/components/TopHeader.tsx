@@ -5,13 +5,13 @@ export default function TopHeader() {
     <div className="bg-[#002d18] text-white py-2 text-sm hidden md:block">
       <div className="container-custom flex justify-between items-center">
         <div className="flex items-center space-x-6">
-          <a href="tel:09155833115" className="flex items-center space-x-2 hover:text-accent-green transition-colors">
+          <a href="tel:+2349155833115" className="flex items-center space-x-2 hover:text-accent-green transition-colors">
             <Phone size={14} className="text-accent-green" />
-            <span>09155833115, 08064975990</span>
+            <span>+234 915 583 3115, +234 806 497 5990</span>
           </a>
-          <a href="mailto:sholapeacelab@gmail.com" className="flex items-center space-x-2 hover:text-accent-green transition-colors">
+          <a href="mailto:sholapeacediagnosticandmedlab@gmail.com" className="flex items-center space-x-2 hover:text-accent-green transition-colors">
             <Mail size={14} className="text-accent-green" />
-            <span>sholapeacelab@gmail.com</span>
+            <span>sholapeacediagnosticandmedlab@gmail.com</span>
           </a>
         </div>
         <div className="flex items-center space-x-2">

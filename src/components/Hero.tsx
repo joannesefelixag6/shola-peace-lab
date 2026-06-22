@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Calendar, Phone, ArrowRight, ShieldCheck, Play } from 'lucide-react';
+import heroImg from '../lab_2.jpeg';
 
 export default function Hero({ onBook }: { onBook: () => void }) {
   return (
@@ -34,11 +35,11 @@ export default function Hero({ onBook }: { onBook: () => void }) {
                   <span>BOOK APPOINTMENT</span>
                 </motion.button>
                 <a 
-                  href="tel:09155833115"
+                  href="tel:+2349155833115"
                   className="flex items-center justify-center space-x-3 px-8 py-5 border-2 border-slate-100 rounded-2xl font-bold text-slate-700 hover:bg-slate-50 transition-all text-lg"
                 >
                   <Phone size={20} />
-                  <span>09155833115</span>
+                  <span>+234 915 583 3115</span>
                 </a>
               </div>
 
@@ -69,7 +70,7 @@ export default function Hero({ onBook }: { onBook: () => void }) {
               className="relative"
             >
                <img 
-                src="https://images.unsplash.com/photo-1559839734-2b71f1536783?q=80&w=2070&auto=format&fit=crop" 
+                src={heroImg} 
                 alt="Black Medical Specialist" 
                 className="rounded-3xl shadow-2xl relative z-10 w-full h-[350px] sm:h-[450px] lg:h-[550px] object-cover"
                 referrerPolicy="no-referrer"

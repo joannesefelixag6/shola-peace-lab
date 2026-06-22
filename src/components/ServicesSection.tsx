@@ -65,13 +65,12 @@ export default function ServicesSection({ onBook }: { onBook: (packageName: stri
               <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">
                 {service.description}
               </p>
-              <div className="flex items-center justify-between w-full mt-auto pt-4 border-t border-slate-50">
-                <span className="text-xl font-bold text-primary-green">{service.price}</span>
+              <div className="flex items-center justify-center w-full mt-auto pt-4 border-t border-slate-50">
                 <button 
                   onClick={() => onBook(service.title)}
                   className="text-primary-green font-bold text-sm flex items-center hover:underline"
                 >
-                  BOOK TEST <ChevronRight size={16} />
+                  BOOK TEST <ChevronRight size={16} className="ml-1" />
                 </button>
               </div>
             </motion.div>

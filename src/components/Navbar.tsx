@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { PhoneCall, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import logoImg from '../lab_4.jpeg';
 
 export default function Navbar({ onBook }: { onBook: () => void }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -9,7 +10,6 @@ export default function Navbar({ onBook }: { onBook: () => void }) {
     { name: 'HOME', href: '#' },
     { name: 'ABOUT US', href: '#about' },
     { name: 'SERVICES', href: '#services' },
-    { name: 'PACKAGES', href: '#packages' },
     { name: 'BLOG', href: '#blog' },
     { name: 'FAQ', href: '#faq' },
     { name: 'CONTACT', href: '#footer' },
@@ -25,18 +25,18 @@ export default function Navbar({ onBook }: { onBook: () => void }) {
   return (
     <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
       <div className="container-custom py-4 flex justify-between items-center">
-        <div className="flex items-center space-x-2">
-          <div className="w-12 h-12 bg-primary-green rounded-full flex items-center justify-center cursor-pointer" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
-            <div className="w-8 h-8 text-white">
-              {/* Simplified Logo representation */}
-              <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
-                <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z" />
-              </svg>
-            </div>
+        <div className="flex items-center space-x-3">
+          <div className="w-16 h-16 md:w-20 md:h-20 bg-white border border-gray-100 rounded-full flex items-center justify-center cursor-pointer overflow-hidden p-1 shadow-sm hover:border-primary-green transition-all" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
+            <img 
+               src={logoImg} 
+               alt="Shola-Peace Logo" 
+               className="w-full h-full object-contain rounded-full"
+               referrerPolicy="no-referrer"
+            />
           </div>
-          <div className="cursor-pointer" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
-            <h1 className="text-xl font-bold text-primary-green leading-tight font-display">SHOLA-PEACE</h1>
-            <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-widest">Diagnostic & Medical Laboratory</p>
+          <div className="cursor-pointer font-display" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
+            <h1 className="text-2xl md:text-3xl font-extrabold text-primary-green leading-none tracking-tight">SHOLA-PEACE</h1>
+            <p className="text-[11px] font-bold text-gray-500 uppercase tracking-widest mt-0.5">Diagnostic & Medical Laboratory</p>
           </div>
         </div>
 

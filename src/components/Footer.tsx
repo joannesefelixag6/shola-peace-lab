@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, ChevronRight } from 'lucide-react';
+import logoImg from '../lab_4.jpeg';
 
 export default function Footer({ onBook }: { onBook: () => void }) {
   const links = [
@@ -15,11 +16,14 @@ export default function Footer({ onBook }: { onBook: () => void }) {
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div>
-            <div className="flex items-center space-x-2 mb-6 cursor-pointer" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
-              <div className="w-10 h-10 bg-primary-green rounded-full flex items-center justify-center">
-                 <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-white">
-                  <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z" />
-                </svg>
+            <div className="flex items-center space-x-3 mb-6 cursor-pointer" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center overflow-hidden p-1 shadow-md">
+                <img 
+                   src={logoImg} 
+                   alt="Shola-Peace Logo" 
+                   className="w-full h-full object-contain rounded-full"
+                   referrerPolicy="no-referrer"
+                />
               </div>
               <h2 className="text-xl font-bold font-display tracking-tight uppercase">SHOLA-PEACE</h2>
             </div>
@@ -42,13 +46,13 @@ export default function Footer({ onBook }: { onBook: () => void }) {
           <div>
             <h3 className="text-lg font-bold mb-6 border-b-2 border-primary-green w-fit pb-1">CONTACT US</h3>
             <ul className="space-y-4">
-              <li className="flex items-start space-x-3 text-slate-400 group cursor-pointer" onClick={() => window.open('tel:09155833115')}>
+              <li className="flex items-start space-x-3 text-slate-400 group cursor-pointer" onClick={() => window.open('tel:+2349155833115')}>
                 <Phone size={18} className="text-primary-green mt-1 group-hover:scale-110 transition-transform" />
-                <span className="group-hover:text-white transition-colors">09155833115, 08064975990</span>
+                <span className="group-hover:text-white transition-colors">+234 915 583 3115, +234 806 497 5990</span>
               </li>
-              <li className="flex items-start space-x-3 text-slate-400 group cursor-pointer" onClick={() => window.open('mailto:sholapeacelab@gmail.com')}>
+              <li className="flex items-start space-x-3 text-slate-400 group cursor-pointer" onClick={() => window.open('mailto:sholapeacediagnosticandmedlab@gmail.com')}>
                 <Mail size={18} className="text-primary-green mt-1 group-hover:scale-110 transition-transform" />
-                <span className="group-hover:text-white transition-colors">sholapeacelab@gmail.com</span>
+                <span className="group-hover:text-white transition-colors">sholapeacediagnosticandmedlab@gmail.com</span>
               </li>
               <li className="flex items-start space-x-3 text-slate-400">
                 <MapPin size={18} className="text-primary-green mt-1" />

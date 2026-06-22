@@ -1,5 +1,7 @@
 import { motion } from 'motion/react';
 import { Truck, Home, CalendarCheck, FileText } from 'lucide-react';
+// @ts-ignore
+import labImage from './lab.jpeg';
 
 export default function HomeCollection({ onBook }: { onBook: (packageName: string) => void }) {
   const steps = [
@@ -61,9 +63,9 @@ export default function HomeCollection({ onBook }: { onBook: (packageName: strin
               className="relative"
             >
               <img 
-                src="https://images.unsplash.com/photo-1631815587646-b85a1bb027e1?q=80&w=2070&auto=format&fit=crop" 
+                src={labImage} 
                 alt="Home Collection Service" 
-                className="rounded-[40px] shadow-3xl border-8 border-white/10"
+                className="rounded-[40px] shadow-3xl border-8 border-white/10 w-full h-auto max-h-[450px] object-cover"
                 referrerPolicy="no-referrer"
               />
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl max-w-[200px]">
