@@ -26,8 +26,11 @@ export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedPackage, setSelectedPackage] = useState('');
 
-  const openBooking = (packageName: string = 'General Checkup') => {
-    setSelectedPackage(packageName);
+  const openBooking = (packageName: unknown = 'General Checkup') => {
+    const name = (typeof packageName === 'string' && packageName.trim() !== '')
+      ? packageName
+      : 'General Checkup';
+    setSelectedPackage(name);
     setIsModalOpen(true);
   };
 
@@ -45,7 +48,7 @@ export default function App() {
         <StatsBar />
         <HealthBlog />
         <FAQSection onBook={openBooking} />
-        <BookingDashboard />
+        <BookingDashboard onBook={openBooking} />
         <MapSection />
         <Testimonials />
       </main>

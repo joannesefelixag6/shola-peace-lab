@@ -1,13 +1,31 @@
-import { motion } from 'motion/react';
-import { Truck, Home, CalendarCheck, FileText } from 'lucide-react';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
+import { Truck, Home, CalendarCheck, FileText, ChevronDown } from 'lucide-react';
 // @ts-ignore
 import labImage from './lab.jpeg';
 
 export default function HomeCollection({ onBook }: { onBook: (packageName: string) => void }) {
+  const [activeStep, setActiveStep] = useState<number | null>(0);
+
   const steps = [
-    { icon: <CalendarCheck />, title: "Book Online", desc: "Select your tests and schedule a time." },
-    { icon: <Home />, title: "Sample Collection", desc: "Certified phlebotomist visits your home." },
-    { icon: <FileText />, title: "Digital Reports", desc: "Get accurate results on your email/phone." }
+    { 
+      icon: <CalendarCheck />, 
+      title: "Book Online", 
+      desc: "Select your tests and schedule a time.",
+      extra: "Choose from our wide menu of diagnostic tests. Pick a convenient date and time range. You can register on behalf of multiple family members in just a few taps." 
+    },
+    { 
+      icon: <Home />, 
+      title: "Sample Collection", 
+      desc: "Certified phlebotomist visits your home.",
+      extra: "Our highly trained personal health officer will call to confirm before arriving, keeping your visit completely private, sanitised and comfortable." 
+    },
+    { 
+      icon: <FileText />, 
+      title: "Digital Reports", 
+      desc: "Get accurate results on your email/phone.",
+      extra: "Reports are processed with automated MLSCN accuracy. We deliver them directly to your email or WhatsApp number via a secure link within 12-24 hours." 
+    }
   ];
 
   return (
@@ -31,18 +49,55 @@ export default function HomeCollection({ onBook }: { onBook: (packageName: strin
               Experience hassle-free sample collection from the comfort of your home or office. Our certified healthcare professionals ensure safety and hygiene at every step.
             </p>
             
-            <div className="space-y-6 mb-10 text-left max-w-md mx-auto lg:mx-0">
-              {steps.map((step, idx) => (
-                <div key={idx} className="flex items-start space-x-4">
-                  <div className="bg-white/10 p-3 rounded-xl text-white border border-white/10">
-                    {step.icon}
+            <div className="space-y-4 mb-10 text-left max-w-md mx-auto lg:mx-0">
+              {steps.map((step, idx) => {
+                const isOpen = activeStep === idx;
+                return (
+                  <div 
+                    key={idx} 
+                    onClick={() => setActiveStep(isOpen ? null : idx)}
+                    className={`flex flex-col p-4 rounded-2xl border transition-all duration-300 cursor-pointer select-none ${
+                      isOpen 
+                        ? 'bg-white/15 border-white/30 shadow-lg shadow-black/10' 
+                        : 'bg-white/5 border-white/10 hover:bg-white/10'
+                    }`}
+                  >
+                    <div className="flex items-center justify-between w-full">
+                      <div className="flex items-center space-x-4">
+                        <div className={`p-3 rounded-xl border transition-colors duration-300 ${
+                          isOpen ? 'bg-accent-green text-primary-green border-accent-green/20' : 'bg-white/10 text-white border-white/10'
+                        }`}>
+                          {step.icon}
+                        </div>
+                        <div>
+                          <h4 className="text-white font-bold">{step.title}</h4>
+                          <p className="text-white/75 text-xs sm:text-sm">{step.desc}</p>
+                        </div>
+                      </div>
+                      <ChevronDown 
+                        size={18} 
+                        className={`text-white/60 transition-transform duration-300 ml-2 ${isOpen ? 'rotate-180 text-white' : ''}`} 
+                      />
+                    </div>
+                    
+                    <AnimatePresence initial={false}>
+                      {isOpen && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0, marginTop: 0 }}
+                          animate={{ height: "auto", opacity: 1, marginTop: 12 }}
+                          exit={{ height: 0, opacity: 0, marginTop: 0 }}
+                          transition={{ duration: 0.25, ease: "easeInOut" }}
+                          className="overflow-hidden"
+                        >
+                          <p className="text-white/80 text-xs sm:text-sm pl-1 leading-relaxed border-l-2 border-accent-green/50">
+                            {step.extra}
+                          </p>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </div>
-                  <div>
-                    <h4 className="text-white font-bold mb-1">{step.title}</h4>
-                    <p className="text-white/60 text-sm">{step.desc}</p>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             <button
