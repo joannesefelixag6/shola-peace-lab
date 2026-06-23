@@ -66,7 +66,7 @@ export default function FAQSection({ onBook }: { onBook: () => void }) {
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: 'auto', opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      className="px-6 pb-6 text-slate-600 leading-relaxed text-sm"
+                      className="px-6 pb-6 text-slate-600 leading-relaxed text-sm overflow-hidden"
                     >
                       {faq.answer}
                     </motion.div>

@@ -56,7 +56,7 @@ export default function Footer({ onBook }: { onBook: () => void }) {
               </li>
               <li className="flex items-start space-x-3 text-slate-400">
                 <MapPin size={18} className="text-primary-green mt-1" />
-                <span>551, Upper Sokponba Road, Benin City, Edo State.</span>
+                <span>551, Upper Sokponba Road, Benin City, Edo State, Nigeria.</span>
               </li>
             </ul>
           </div>

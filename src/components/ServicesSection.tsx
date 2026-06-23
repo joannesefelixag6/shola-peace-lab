@@ -53,10 +53,9 @@ export default function ServicesSection({ onBook }: { onBook: (packageName: stri
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <motion.div
+            <div
               key={index}
-              whileHover={{ y: -10 }}
-              className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center group"
+              className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center group transition-all duration-300 hover:shadow-md lg:hover:-translate-y-2 transform-gpu"
             >
               <div className="mb-6 p-4 bg-primary-green/5 rounded-full group-hover:bg-primary-green/10 transition-colors">
                 {service.icon}
@@ -73,7 +72,7 @@ export default function ServicesSection({ onBook }: { onBook: (packageName: stri
                   BOOK TEST <ChevronRight size={16} className="ml-1" />
                 </button>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 

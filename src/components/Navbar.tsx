@@ -12,6 +12,7 @@ export default function Navbar({ onBook }: { onBook: () => void }) {
     { name: 'SERVICES', href: '#services' },
     { name: 'BLOG', href: '#blog' },
     { name: 'FAQ', href: '#faq' },
+    { name: 'LOCATION', href: '#location' },
     { name: 'CONTACT', href: '#footer' },
   ];
 
@@ -50,14 +51,12 @@ export default function Navbar({ onBook }: { onBook: () => void }) {
               {link.name}
             </a>
           ))}
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+          <button
             onClick={onBook}
-            className="bg-primary-green text-white px-6 py-2.5 rounded text-sm font-bold shadow-lg shadow-primary-green/20"
+            className="bg-primary-green text-white px-6 py-2.5 rounded text-sm font-bold shadow-lg shadow-primary-green/20 transition-all duration-200 active:scale-95 lg:hover:scale-105 transform-gpu"
           >
             BOOK APPOINTMENT
-          </motion.button>
+          </button>
         </div>
 
         {/* Mobile menu icon */}

@@ -165,10 +165,9 @@ export default function HealthBlog() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {blogs.map((blog, index) => (
-            <motion.article
+            <article
               key={index}
-              whileHover={{ y: -10 }}
-              className="group cursor-pointer"
+              className="group cursor-pointer transition-all duration-300 hover:shadow-md lg:hover:-translate-y-2 transform-gpu"
               onClick={() => setActiveBlog(blog)}
             >
               <div className="relative mb-6 overflow-hidden rounded-3xl aspect-[4/3]">
@@ -202,7 +201,7 @@ export default function HealthBlog() {
                   Read Article <ArrowRight size={16} className="ml-2 group-hover/btn:translate-x-1 transition-transform" />
                 </button>
               </div>
-            </motion.article>
+            </article>
           ))}
         </div>
 

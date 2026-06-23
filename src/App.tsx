@@ -19,6 +19,7 @@ import Footer from './components/Footer';
 import FloatingActions from './components/FloatingActions';
 import BookingModal from './components/BookingModal';
 import BookingDashboard from './components/BookingDashboard';
+import MapSection from './components/MapSection';
 import { useState } from 'react';
 
 export default function App() {
@@ -45,6 +46,7 @@ export default function App() {
         <HealthBlog />
         <FAQSection onBook={openBooking} />
         <BookingDashboard />
+        <MapSection />
         <Testimonials />
       </main>
       <Footer onBook={openBooking} />

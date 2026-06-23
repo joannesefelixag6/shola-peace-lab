@@ -25,18 +25,16 @@ export default function Hero({ onBook }: { onBook: () => void }) {
                 Experience world-class diagnostic services with automated technology. Get your medical reports within 24 hours in Benin City.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                <button
                   onClick={onBook}
-                  className="bg-primary-green text-white px-10 py-5 rounded-2xl font-bold shadow-xl shadow-primary-green/30 text-lg flex items-center justify-center space-x-3"
+                  className="bg-primary-green text-white px-10 py-5 rounded-2xl font-bold shadow-xl shadow-primary-green/30 text-lg flex items-center justify-center space-x-3 transition-all duration-200 active:scale-95 lg:hover:scale-105 transform-gpu"
                 >
                   <Calendar size={20} />
                   <span>BOOK APPOINTMENT</span>
-                </motion.button>
+                </button>
                 <a 
                   href="tel:+2349155833115"
-                  className="flex items-center justify-center space-x-3 px-8 py-5 border-2 border-slate-100 rounded-2xl font-bold text-slate-700 hover:bg-slate-50 transition-all text-lg"
+                  className="flex items-center justify-center space-x-3 px-8 py-5 border-2 border-slate-100 rounded-2xl font-bold text-slate-700 hover:bg-slate-50 transition-all text-lg active:scale-95 transform-gpu"
                 >
                   <Phone size={20} />
                   <span>+234 915 583 3115</span>
@@ -80,8 +78,8 @@ export default function Hero({ onBook }: { onBook: () => void }) {
               
               <motion.div 
                 animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 4, repeat: Infinity }}
-                className="absolute -right-8 top-1/4 bg-white p-4 rounded-2xl shadow-xl z-20 flex items-center space-x-4 border border-slate-100"
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute hidden sm:flex -right-4 md:-right-8 top-1/4 bg-white p-4 rounded-2xl shadow-xl z-20 items-center space-x-4 border border-slate-100"
               >
                 <div className="w-12 h-12 bg-primary-green rounded-full flex items-center justify-center text-white">
                   <ShieldCheck size={24} />

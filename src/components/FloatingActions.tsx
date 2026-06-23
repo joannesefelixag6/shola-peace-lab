@@ -34,12 +34,10 @@ export default function FloatingActions() {
         {isVisible && (
           <motion.button
             onClick={scrollToTop}
-            initial={{ opacity: 0, y: 20, scale: 0.8 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.8 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            className="bg-slate-900 text-white p-4 rounded-full shadow-2xl flex items-center justify-center hover:bg-primary-green transition-colors group relative"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            className="bg-slate-900 text-white p-4 rounded-full shadow-2xl flex items-center justify-center hover:bg-primary-green transition-all duration-300 active:scale-95 lg:hover:scale-110 transform-gpu group relative"
             title="Scroll to Top"
             aria-label="Scroll to top"
           >
@@ -52,13 +50,11 @@ export default function FloatingActions() {
       </AnimatePresence>
 
       {/* WhatsApp Button */}
-      <motion.a
+      <a
         href={`https://wa.me/${whatsappNumber}`}
         target="_blank"
         rel="noopener noreferrer"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        className="bg-[#25D366] text-white p-4 rounded-full shadow-2xl flex items-center justify-center hover:bg-[#128C7E] transition-colors group relative"
+        className="bg-[#25D366] text-white p-4 rounded-full shadow-2xl flex items-center justify-center hover:bg-[#128C7E] transition-all duration-300 active:scale-95 lg:hover:scale-110 transform-gpu group relative"
         title="Chat on WhatsApp"
       >
         <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
@@ -67,21 +63,19 @@ export default function FloatingActions() {
         <span className="absolute right-full mr-4 bg-slate-900 text-white px-3 py-1.5 rounded-lg text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
           WhatsApp Us
         </span>
-      </motion.a>
+      </a>
 
       {/* Email Button */}
-      <motion.a
+      <a
         href={`mailto:${email}`}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        className="bg-primary-green text-white p-4 rounded-full shadow-2xl flex items-center justify-center hover:bg-slate-900 transition-colors group relative"
+        className="bg-primary-green text-white p-4 rounded-full shadow-2xl flex items-center justify-center hover:bg-slate-900 transition-all duration-300 active:scale-95 lg:hover:scale-110 transform-gpu group relative"
         title="Email Us"
       >
         <Mail size={24} />
         <span className="absolute right-full mr-4 bg-slate-900 text-white px-3 py-1.5 rounded-lg text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
           Email Us
         </span>
-      </motion.a>
+      </a>
     </div>
   );
 }

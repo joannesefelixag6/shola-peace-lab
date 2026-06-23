@@ -45,15 +45,13 @@ export default function HomeCollection({ onBook }: { onBook: (packageName: strin
               ))}
             </div>
 
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            <button
               onClick={() => onBook('Home Collection')}
-              className="bg-white text-primary-green px-10 py-4 rounded-xl font-bold shadow-2xl flex items-center space-x-3"
+              className="bg-white text-primary-green px-10 py-4 rounded-xl font-bold shadow-2xl flex items-center space-x-3 transition-all duration-200 active:scale-95 lg:hover:scale-105 transform-gpu"
             >
               <Truck size={20} />
               <span>BOOK HOME COLLECTION</span>
-            </motion.button>
+            </button>
           </div>
 
           <div className="lg:w-1/2">
@@ -68,7 +66,7 @@ export default function HomeCollection({ onBook }: { onBook: (packageName: strin
                 className="rounded-[40px] shadow-3xl border-8 border-white/10 w-full h-auto max-h-[450px] object-cover"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl max-w-[200px]">
+              <div className="absolute hidden sm:block -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl max-w-[200px]">
                 <div className="flex items-center space-x-2 text-primary-green mb-2">
                   <ShieldCheck className="fill-primary-green text-white" />
                   <span className="font-bold text-slate-900">100% Safe</span>
